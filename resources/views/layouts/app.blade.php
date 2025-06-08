@@ -13,24 +13,39 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- Styles -->
+        @livewireStyles
     </head>
     <body class="font-sans antialiased">
+        <x-banner />
+
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            @livewire('navigation-menu')
 
             <!-- Page Heading -->
-            @isset($header)
+            @if (isset($header))
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
-            @endisset
+            @endif
 
             <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
+
+            <footer class="bg-white shadow mt-auto p-4 sm:p-6">
+                <p class="text-sm text-center text-gray-500">
+                    &copy; 2025 <a href="#" class="hover:underline" target="_blank">Dash Aqiqah Rizqi Alif</a>. All rights reserved.
+                </p>
+            </footer>
         </div>
+
+        @stack('modals')
+
+        @livewireScripts
     </body>
 </html>
