@@ -26,6 +26,9 @@ Route::middleware([
     // Article
     Route::get('/article-list', App\Http\Livewire\Article\Index::class)->name('article-list');
     Route::get('/articlel-form/{articleId?}', App\Http\Livewire\Article\FormArticle::class)->name('article-form');
+    // Category Article
+    Route::get('/category-article-list', App\Http\Livewire\Article\CategoryArticle\Index::class)->name('category-article-list');
+    Route::get('/category-article-form/{categoryArticleId?}', App\Http\Livewire\Article\CategoryArticle\FormCategoryArticle::class)->name('category-article-form');
     // Aqiqah
     Route::get('/aqiqah-list', App\Http\Livewire\Aqiqah\Index::class)->name('aqiqah-list');
     Route::get('/aqiqah-form/{aqiqahId?}', App\Http\Livewire\Aqiqah\FormAqiqah::class)->name('aqiqah-form');

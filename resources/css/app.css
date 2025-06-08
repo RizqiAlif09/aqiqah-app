@@ -6,4 +6,68 @@
 [x-cloak] {
     display: none;
 }
+/* Side Bar Style */
+/* Sidebar styles */
+/* Sidebar styles */
+.fixed {
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .fixed {
+        transform: translateX(-100%);
+    }
+    
+    .fixed.block {
+        transform: translateX(0);
+    }
+}
+
+.bg-emerald-50 {
+    background-color: rgba(209, 250, 229, 0.5);
+}
+
+.hover\:bg-emerald-50:hover {
+    background-color: rgba(209, 250, 229, 0.3);
+}
+
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+/* Sidebar styles */
+.fixed {
+    z-index: 50;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Header styles */
+nav h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    nav h1 {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+}
+
+/* Main content margin */
+main > div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Powergrid Table  */
 @import './../../vendor/power-components/livewire-powergrid/dist/tailwind.css'
